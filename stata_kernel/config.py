@@ -84,7 +84,8 @@ class Config():
         self._cache_temp_dir = TemporaryDirectory(dir=str(cache_par_dir))
         cache_dir = Path(self._cache_temp_dir.name)
 
-        stata_path = self.get('stata_path', find_path())
+        stata_path = r'C:/Program Files/Stata17/StataSE-64.exe'
+        #stata_path = self.get('stata_path', find_path())
         if not stata_path:
             self.raise_config_error('stata_path')
 
